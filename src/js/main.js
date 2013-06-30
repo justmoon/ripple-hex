@@ -1,6 +1,6 @@
 var HexGrid = function ()
 {
-  this.radius = 12;
+  this.radius = 9;
   this.offsetX = 0;
   this.offsetY = 0;
   this.circleDist = 12;
@@ -65,7 +65,7 @@ HexGrid.prototype.drawBackgroundCircle = function (x, y, z)
     x: coord[0],
     y: coord[1],
     radius: this.circleSize,
-    fill: '#ddd'
+    fill: '#FAFAFA'
   });
 
   // add the shape to the layer
@@ -98,7 +98,7 @@ HexGrid.prototype.drawConnection = function (from, to)
 
   var line = new Kinetic.Line({
     points: from.concat(to),
-    stroke: '#890000',
+    stroke: '#999',
     strokeWidth: this.connWidth,
     lineCap: 'round',
     lineJoin: 'round'
@@ -139,9 +139,9 @@ var TxViz = function (data) {
 }
 
 TxViz.colors = {
-  "start": "#F00",
-  "dest": "#0F0",
-  "hop": "#00F"
+  "start": "#9AC173",
+  "dest": "#EF4947",
+  "hop": "#488EBE"
 };
 
 /**
